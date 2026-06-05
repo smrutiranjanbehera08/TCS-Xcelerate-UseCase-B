@@ -1,17 +1,21 @@
 import yfinance as yf
 
-symbol = input("Enter Stock Symbol: ")
+def get_financial_data(symbol):
+    ticker = yf.Ticker(symbol)
+    info = ticker.info
 
-ticker = yf.Ticker(symbol)
+    return {
+        "Company": info.get("longName"),
+        "Current Price": info.get("currentPrice"),
+        "Market Cap": info.get("marketCap"),
+        "PE Ratio": info.get("trailingPE"),
+        "Sector": info.get("sector"),
+        "Industry": info.get("industry")
+    }
 
-info = ticker.info
+if __name__ == "__main__":
+    symbol = input("Enter Stock Symbol: ")
+    data = get_financial_data(symbol)
 
-print("\n===== COMPANY REPORT =====")
-print("Company:", info.get("longName"))
-print("Current Price:", info.get("currentPrice"))
-print("Market Cap:", info.get("marketCap"))
-print("PE Ratio:", info.get("trailingPE"))
-print("Sector:", info.get("sector"))
-print("Industry:", info.get("industry"))
-print("52 Week High:", info.get("fiftyTwoWeekHigh"))
-print("52 Week Low:", info.get("fiftyTwoWeekLow"))
+    for key, value in data.items():
+        print(f"{key}: {value}")

@@ -1,12 +1,18 @@
 import yfinance as yf
 
-symbol = input("Enter Stock Symbol: ")
+def get_news(symbol):
+    ticker = yf.Ticker(symbol)
+    news = ticker.news
 
-ticker = yf.Ticker(symbol)
+    headlines = []
 
-news = ticker.news
+    for article in news[:5]:
+        headlines.append(article["content"]["title"])
 
-print("\n===== LATEST NEWS =====\n")
+    return headlines
 
-for i, article in enumerate(news[:5], start=1):
-    print(f"{i}. {article['content']['title']}")
+if __name__ == "__main__":
+    symbol = input("Enter Stock Symbol: ")
+
+    for news in get_news(symbol):
+        print(news)
