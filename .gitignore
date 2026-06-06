@@ -1,4 +1,5 @@
 tcs_env/
 __pycache__/
 *.pyc
-.DS_Storereport_*.txt
+.DS_Store
+report_*.txt
