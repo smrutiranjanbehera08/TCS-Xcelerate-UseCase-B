@@ -1,12 +1,16 @@
 from financial_agent import get_financial_data
 from news_agent import get_news
 from peer_comparison_agent import compare_companies
+from filings_agent import get_filing_summary
+
 
 def get_complete_report(symbol):
 
     financial_data = get_financial_data(symbol)
 
     news_data = get_news(symbol)
+
+    filing_data = get_filing_summary(symbol)
 
     peer_data = compare_companies([
         "TCS.NS",
@@ -17,6 +21,7 @@ def get_complete_report(symbol):
     return {
         "financial": financial_data,
         "news": news_data,
+        "filing": filing_data,
         "peer": peer_data
     }
 
@@ -36,6 +41,21 @@ if __name__ == "__main__":
 
     for i, headline in enumerate(report["news"], start=1):
         print(f"{i}. {headline}")
+
+    print("\n===== FILINGS SUMMARY =====\n")
+
+    print("Company:", report["filing"]["Company"])
+    print("Employees:", report["filing"]["Employees"])
+    print("Website:", report["filing"]["Website"])
+
+    print("\nBusiness Summary:\n")
+
+    summary = report["filing"]["Business Summary"]
+
+    if summary:
+        print(summary[:800] + "...")
+    else:
+        print("No business summary available.")
 
     print("\n===== PEER COMPARISON =====\n")
 
