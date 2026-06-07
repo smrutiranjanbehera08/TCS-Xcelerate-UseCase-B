@@ -1,0 +1,4 @@
+yfinance
+streamlit
+requests
+beautifulsoup4
