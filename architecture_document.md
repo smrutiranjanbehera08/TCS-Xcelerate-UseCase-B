@@ -43,7 +43,7 @@ The system follows a multi-agent architecture where a Coordinator Agent orchestr
 
   * Current Price
   * Market Capitalization
-  * PE Ratio
+  * PE Ratio (Price-to-Earnings Ratio)
 
 ### 6. Thesis Writer Agent
 
