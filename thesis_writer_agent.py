@@ -47,7 +47,6 @@ def generate_thesis(symbol):
         )
 
     thesis_text += "\n----- Bull Case -----\n"
-
     thesis_text += (
         f"{financial['Company']} is a major player in the "
         f"{financial['Sector']} sector with strong market presence "
@@ -55,21 +54,18 @@ def generate_thesis(symbol):
     )
 
     thesis_text += "\n----- Bear Case -----\n"
-
     thesis_text += (
         "Market volatility, sector competition, and economic "
         "slowdowns may impact future growth and profitability.\n"
     )
 
     thesis_text += "\n----- Risks -----\n"
-
     thesis_text += (
         "Investors should consider valuation levels, industry trends, "
         "regulatory changes, and company-specific execution risks.\n"
     )
 
     thesis_text += "\n----- Investment Thesis -----\n"
-
     thesis_text += (
         f"{financial['Company']} operates in the "
         f"{financial['Sector']} sector. Based on available financial "
@@ -78,16 +74,20 @@ def generate_thesis(symbol):
         "making investment decisions.\n"
     )
 
-    print(thesis_text)
-
-    filename = f"thesis_{symbol.replace('.','_')}.txt"
+    filename = f"thesis_{symbol.replace('.', '_')}.txt"
 
     with open(filename, "w") as file:
         file.write(thesis_text)
 
     print(f"\nThesis saved as: {filename}")
 
+    return thesis_text
+
 
 if __name__ == "__main__":
     symbol = input("Enter Stock Symbol: ")
-    generate_thesis(symbol)
+
+    thesis = generate_thesis(symbol)
+
+    print("\n")
+    print(thesis)
