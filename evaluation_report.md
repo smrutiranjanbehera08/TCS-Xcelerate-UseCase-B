@@ -39,21 +39,25 @@ The evaluation focuses on:
 | Peer Comparison | Comparison with competitors                |
 | Thesis Quality  | Presence of bull case, bear case and risks |
 
-## Results
+# Evaluation Results
 
-| Company       | Structure | Financial Data | News | Peer Comparison | Thesis |
-| ------------- | --------- | -------------- | ---- | --------------- | ------ |
-| TCS           | Good      | Good           | Good | Good            | Good   |
-| Infosys       | Good      | Good           | Good | Good            | Good   |
-| Wipro         | Good      | Good           | Good | Good            | Good   |
-| Reliance      | Good      | Good           | Good | Good            | Good   |
-| HDFC Bank     | Good      | Good           | Good | Good            | Good   |
-| ICICI Bank    | Good      | Good           | Good | Good            | Good   |
-| SBI           | Good      | Good           | Good | Good            | Good   |
-| L&T           | Good      | Good           | Good | Good            | Good   |
-| ITC           | Good      | Good           | Good | Good            | Good   |
-| Bharti Airtel | Good      | Good           | Good | Good            | Good   |
+| Company         | Structure | Financial Data | News    | Peer Comparison | Thesis |
+| --------------- | --------- | -------------- | ------- | --------------- | ------ |
+| TCS             | Good      | Good           | Good    | Good            | Good   |
+| Infosys         | Good      | Good           | Good    | Good            | Good   |
+| Wipro           | Good      | Good           | Good    | Good            | Good   |
+| Reliance        | Good      | Good           | Good    | Average         | Good   |
+| HDFC Bank       | Good      | Good           | Average | Average         | Good   |
+| ICICI Bank      | Good      | Good           | Average | Average         | Good   |
+| SBI             | Good      | Good           | Average | Average         | Good   |
+| Larsen & Toubro | Good      | Good           | Good    | Average         | Good   |
+| ITC             | Good      | Good           | Average | Average         | Good   |
+| Bharti Airtel   | Good      | Good           | Good    | Average         | Good   |
 
-## Conclusion
+## Overall Conclusion
 
-The Multi-Agent Financial Research Analyst successfully generated structured investment reports for all tested companies. The system demonstrated consistent report generation, financial data retrieval, news aggregation, peer comparison, and investment thesis creation.
+The Multi-Agent Financial Research Analyst was evaluated on ten publicly listed Indian companies across multiple sectors, including Information Technology, Banking, Telecom, Energy, Industrials, and Consumer Goods. The system consistently produced structured investment research reports containing financial data, recent news, company profile information, peer comparison, and investment thesis sections.
+
+Financial data retrieval and report generation performed reliably across all evaluated companies. News retrieval was generally effective, though some companies received limited or partially unrelated news articles. Peer comparison was accurate for technology companies but requires improvement for sector-specific comparisons in banking, telecom, energy, industrials, and consumer goods.
+
+Overall, the system successfully achieved the core objectives of the use case and demonstrated effective multi-agent coordination for automated financial research and investment thesis generation.
