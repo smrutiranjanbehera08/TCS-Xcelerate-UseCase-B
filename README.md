@@ -8,7 +8,7 @@ This project implements a Multi-Agent Financial Research Analyst system develope
 
 ## Project Objectives
 
-![Architecture Diagram](images/architecture.png)
+The objective of this project is to automate the equity research workflow using a multi-agent architecture. The system gathers company information from multiple sources and generates a structured investment research report.
 
 ---
 
@@ -26,19 +26,7 @@ This project implements a Multi-Agent Financial Research Analyst system develope
 
 ## Project Architecture
 
-User
-↓
-Streamlit UI (app.py)
-↓
-Thesis Writer Agent
-↓
-Coordinator Agent
-├── Financial Data Agent
-├── News Agent
-├── Filings Agent
-└── Peer Comparison Agent
-↓
-Investment Thesis Report
+![Architecture Diagram](images/architecture.png)
 
 ---
 
