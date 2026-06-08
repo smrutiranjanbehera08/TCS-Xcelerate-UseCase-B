@@ -1,10 +1,37 @@
 import yfinance as yf
 
+PEER_MAP = {
+    "TCS.NS": ["TCS.NS", "INFY.NS", "WIPRO.NS"],
+    "INFY.NS": ["INFY.NS", "TCS.NS", "WIPRO.NS"],
+    "WIPRO.NS": ["WIPRO.NS", "TCS.NS", "INFY.NS"],
+
+    "HDFCBANK.NS": ["HDFCBANK.NS", "ICICIBANK.NS", "SBIN.NS"],
+    "ICICIBANK.NS": ["ICICIBANK.NS", "HDFCBANK.NS", "SBIN.NS"],
+    "SBIN.NS": ["SBIN.NS", "HDFCBANK.NS", "ICICIBANK.NS"],
+
+    "RELIANCE.NS": ["RELIANCE.NS", "ONGC.NS", "BPCL.NS"],
+
+    "BHARTIARTL.NS": ["BHARTIARTL.NS", "IDEA.NS", "RELIANCE.NS"],
+
+    "ITC.NS": ["ITC.NS", "HINDUNILVR.NS", "NESTLEIND.NS"],
+
+    "LT.NS": ["LT.NS", "SIEMENS.NS", "ABB.NS"]
+}
+
+
+def get_peers(symbol):
+    return PEER_MAP.get(
+        symbol.upper(),
+        ["TCS.NS", "INFY.NS", "WIPRO.NS"]
+    )
+
+
 def compare_companies(company_symbols):
 
     comparison_data = []
 
     for symbol in company_symbols:
+
         ticker = yf.Ticker(symbol)
         info = ticker.info
 
@@ -20,13 +47,11 @@ def compare_companies(company_symbols):
 
 if __name__ == "__main__":
 
-    company1 = input("Enter Company 1 Symbol: ")
-    company2 = input("Enter Company 2 Symbol: ")
-    company3 = input("Enter Company 3 Symbol: ")
+    symbol = input("Enter Stock Symbol: ")
 
-    companies = [company1, company2, company3]
+    peers = get_peers(symbol)
 
-    result = compare_companies(companies)
+    result = compare_companies(peers)
 
     print("\n===== PEER COMPARISON REPORT =====\n")
 

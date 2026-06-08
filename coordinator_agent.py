@@ -1,6 +1,6 @@
 from financial_agent import get_financial_data
 from news_agent import get_news
-from peer_comparison_agent import compare_companies
+from peer_comparison_agent import compare_companies, get_peers
 from filings_agent import get_filing_summary
 
 
@@ -12,11 +12,9 @@ def get_complete_report(symbol):
 
     filing_data = get_filing_summary(symbol)
 
-    peer_data = compare_companies([
-        "TCS.NS",
-        "INFY.NS",
-        "WIPRO.NS"
-    ])
+    peer_data = compare_companies(
+    get_peers(symbol)
+    )
 
     return {
         "financial": financial_data,
