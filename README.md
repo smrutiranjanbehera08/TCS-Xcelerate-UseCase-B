@@ -1,68 +1,130 @@
-# TCS-Xcelerate-UseCase-B
-## Multi-Agent Financial Research Analyst  using Google ADK | TCS Xcelerate Program
+# 🚀 Multi-Agent Financial Research Analyst
 
+## Google ADK | TCS Xcelerate Program – Use Case B
 
-This project implements a Multi-Agent Financial Research Analyst system developed as part of the TCS Xcelerate Program. The system automates investment research by coordinating multiple specialized agents that collect financial information, analyze company data, retrieve recent news, compare industry peers, and generate an investment thesis.
-
----
-
-## Project Objectives
-
-The objective of this project is to automate the equity research workflow using a multi-agent architecture. The system gathers company information from multiple sources and generates a structured investment research report.
+A Multi-Agent Financial Research System that automates equity research by collecting financial data, company information, recent news, peer comparisons, and generating investment research reports.
 
 ---
 
-## Features
+# 📌 Project Overview
 
-* Financial Data Analysis
-* Latest News Retrieval
-* Company Filings Summary
-* Peer Comparison Analysis
-* Investment Thesis Generation
-* Streamlit Web Interface
-* Automated Report Generation
+This project was developed as part of the **TCS Xcelerate Program (Use Case B)**.
+
+The system uses a **Multi-Agent Architecture** where specialized agents collaborate to perform company analysis and generate structured investment reports.
+
+The project also includes a **Google ADK Integration Layer**, demonstrating agent orchestration through reusable tools and workflows.
 
 ---
 
-## Project Architecture
+# ✨ Key Features
+
+✅ Financial Data Analysis
+
+✅ Latest News Retrieval
+
+✅ Company Filings Summary
+
+✅ Dynamic Peer Comparison
+
+✅ Investment Thesis Generation
+
+✅ Streamlit Web Interface
+
+✅ Automated Report Generation
+
+✅ Google ADK Integration
+
+✅ Session Management
+
+✅ Sector-Specific Peer Selection
+
+---
+
+# 🏗️ System Architecture
 
 ![Architecture Diagram](images/architecture.png)
 
 ---
 
-## Agents Implemented
+# 🤖 Agents Implemented
 
-### Coordinator Agent
+## 1. Coordinator Agent
 
-Acts as the central controller and coordinates all specialist agents.
+Acts as the central controller of the system.
 
-### Financial Data Agent
+**Responsibilities:**
 
-Retrieves financial information such as:
+* Receives user stock symbol
+* Invokes all specialist agents
+* Aggregates results
+* Generates unified company reports
+
+---
+
+## 2. Financial Data Agent
+
+Retrieves company financial information.
+
+**Data Collected:**
 
 * Current Price
-* Market Cap
+* Market Capitalization
 * PE Ratio
 * Sector
 * Industry
 
-### News Agent
+---
 
-Retrieves recent company-related news headlines.
+## 3. News Agent
 
-### Filings Agent
+Retrieves company-related news.
 
-Provides company profile and business overview information.
+**Outputs:**
 
-### Peer Comparison Agent
+* Latest Headlines
+* Company Updates
+* Market Developments
 
-Compares company metrics with industry peers.
+---
 
-### Thesis Writer Agent
+## 4. Filings Agent
 
-Generates a structured investment thesis containing:
+Retrieves company profile information.
+
+**Outputs:**
+
+* Business Summary
+* Employee Count
+* Company Website
+
+---
+
+## 5. Peer Comparison Agent
+
+Performs sector-specific peer analysis.
+
+### Technology Companies
+
+* TCS
+* Infosys
+* Wipro
+
+### Banking Companies
+
+* HDFC Bank
+* ICICI Bank
+* SBI
+
+---
+
+## 6. Thesis Writer Agent
+
+Generates investment research reports.
+
+### Sections Generated
 
 * Financial Summary
+* Latest News
 * Business Overview
 * Bull Case
 * Bear Case
@@ -71,96 +133,216 @@ Generates a structured investment thesis containing:
 
 ---
 
-## Technologies Used
+# 🔗 Google ADK Integration
+
+The project includes a dedicated ADK layer built on top of the existing agents.
+
+## ADK Tools Implemented
+
+### Financial Tool
+
+Retrieves financial metrics from the Financial Agent.
+
+### News Tool
+
+Retrieves recent company news.
+
+### Filings Tool
+
+Retrieves company profile and business information.
+
+### Peer Tool
+
+Performs sector-specific peer comparison.
+
+### Coordinator Tool
+
+Combines all ADK tools into a unified workflow.
+
+### Session Manager
+
+Stores and retrieves contextual information.
+
+---
+
+# 🔄 ADK Workflow
+
+User Request
+
+     ↓
+
+Coordinator Tool
+
+     ↓
+
+Financial Tool
+
+     ↓
+
+News Tool
+
+     ↓
+
+Filings Tool
+
+     ↓
+
+Peer Tool
+
+     ↓
+
+Session Manager
+
+     ↓
+
+Final Research Report
+
+---
+
+# 🛠️ Technologies Used
 
 * Python
+* Google ADK
 * Streamlit
 * Yahoo Finance (yfinance)
-* Git & GitHub
+* Requests
+* BeautifulSoup4
+* Pandas
+* lxml
+* Git
+* GitHub
 
 ---
 
-## Project Files
+# 📂 Project Structure
 
-* financial_agent.py
-* news_agent.py
-* filings_agent.py
-* peer_comparison_agent.py
-* coordinator_agent.py
-* thesis_writer_agent.py
-* app.py
-* architecture_document.md
-* evaluation_report.md
+```text
+TCS-Xcelerate-UseCase-B/
+│
+├── financial_agent.py
+├── news_agent.py
+├── filings_agent.py
+├── peer_comparison_agent.py
+├── coordinator_agent.py
+├── thesis_writer_agent.py
+├── app.py
+│
+├── adk/
+│   ├── financial_tool.py
+│   ├── news_tool.py
+│   ├── filings_tool.py
+│   ├── peer_tool.py
+│   ├── coordinator_tool.py
+│   └── session_manager.py
+│
+├── architecture_document.md
+├── evaluation_report.md
+├── DEPLOYMENT.md
+└── README.md
+```
 
 ---
 
-## Installation
+# ⚙️ Installation
 
-Clone the repository:
+### Clone Repository
 
+```bash
 git clone <repository-url>
+```
 
-Move into the project folder:
+### Navigate to Project
 
+```bash
 cd TCS-Xcelerate-UseCase-B
+```
 
-Create virtual environment:
+### Create Virtual Environment
 
+```bash
 python3 -m venv tcs_env
+```
 
-Activate environment:
+### Activate Environment
 
+```bash
 source tcs_env/bin/activate
+```
 
-Install dependencies:
+### Install Dependencies
 
-pip install yfinance streamlit
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-## Running the Application
+# ▶️ Running the Application
 
-Run the Streamlit interface:
+### Streamlit Interface
 
+```bash
 streamlit run app.py
+```
 
 or
 
+```bash
 python3 -m streamlit run app.py
+```
 
 ---
 
-## Evaluation
+# 📊 Evaluation
 
 The system was evaluated using 10 publicly listed Indian companies:
 
-* TCS
+* Tata Consultancy Services (TCS)
 * Infosys
 * Wipro
-* Reliance
+* Reliance Industries
 * HDFC Bank
 * ICICI Bank
-* SBI
-* Larsen & Toubro
+* State Bank of India (SBI)
+* Larsen & Toubro (L&T)
 * ITC
 * Bharti Airtel
 
-Results are documented in evaluation_report.md.
+Results are documented in:
+
+```text
+evaluation_report.md
+```
 
 ---
 
-## Future Improvements
+# ✅ Current Status
 
+### Completed
+
+* Multi-Agent Architecture
+* Streamlit Web Interface
+* Dynamic Peer Comparison
 * Google ADK Integration
-* Dynamic Industry Peer Selection
-* Advanced News Summarization
-* Cloud Deployment using Google Cloud Run
-* Persistent Agent Memory
+* Coordinator Workflow
+* Session Management
+* Evaluation Report
+* Documentation
 
 ---
 
-## Author
+# 🚀 Future Enhancements
 
-Smrutiranjan Behera
+* AI-Powered Thesis Generation
+* Advanced News Filtering
+* Cloud Deployment
+* Persistent Database Storage
+* Enhanced Agent Memory
+
+---
+
+# 👨‍💻 Author
+
+**Smrutiranjan Behera**
 
 TCS Xcelerate Program – Use Case B
