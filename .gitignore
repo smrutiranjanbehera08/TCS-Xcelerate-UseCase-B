@@ -1,4 +1,5 @@
-tcs_env/
+.env
+__pycache__/tcs_env/
 __pycache__/
 *.pyc
 .DS_Store

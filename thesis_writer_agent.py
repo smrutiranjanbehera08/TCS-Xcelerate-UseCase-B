@@ -1,4 +1,6 @@
 from coordinator_agent import get_complete_report
+from ai_thesis_agent import generate_ai_thesis
+
 
 def generate_thesis(symbol):
 
@@ -8,6 +10,14 @@ def generate_thesis(symbol):
     news = report["news"]
     peers = report["peer"]
     filing = report["filing"]
+
+    news_text = "\n".join(news)
+
+    ai_analysis = generate_ai_thesis(
+        financial["Company"],
+        financial["Sector"],
+        news_text
+    )
 
     thesis_text = ""
 
@@ -23,6 +33,7 @@ def generate_thesis(symbol):
     thesis_text += f"PE Ratio: {financial['PE Ratio']}\n\n"
 
     thesis_text += "----- Latest News -----\n"
+
     for i, headline in enumerate(news, start=1):
         thesis_text += f"{i}. {headline}\n"
 
@@ -46,32 +57,16 @@ def generate_thesis(symbol):
             f"PE: {company['PE Ratio']}\n"
         )
 
-    thesis_text += "\n----- Bull Case -----\n"
-    thesis_text += (
-        f"{financial['Company']} is a major player in the "
-        f"{financial['Sector']} sector with strong market presence "
-        "and established business operations.\n"
-    )
-
-    thesis_text += "\n----- Bear Case -----\n"
-    thesis_text += (
-        "Market volatility, sector competition, and economic "
-        "slowdowns may impact future growth and profitability.\n"
-    )
-
-    thesis_text += "\n----- Risks -----\n"
-    thesis_text += (
-        "Investors should consider valuation levels, industry trends, "
-        "regulatory changes, and company-specific execution risks.\n"
-    )
+    thesis_text += "\n----- AI Analysis -----\n"
+    thesis_text += ai_analysis + "\n"
 
     thesis_text += "\n----- Investment Thesis -----\n"
     thesis_text += (
         f"{financial['Company']} operates in the "
         f"{financial['Sector']} sector. Based on available financial "
-        "data, recent news, company profile, and peer comparison, "
-        "investors should perform further due diligence before "
-        "making investment decisions.\n"
+        "data, recent news, company profile, peer comparison, and "
+        "AI-generated analysis, investors should perform further "
+        "due diligence before making investment decisions.\n"
     )
 
     filename = f"thesis_{symbol.replace('.', '_')}.txt"
@@ -85,6 +80,7 @@ def generate_thesis(symbol):
 
 
 if __name__ == "__main__":
+
     symbol = input("Enter Stock Symbol: ")
 
     thesis = generate_thesis(symbol)
