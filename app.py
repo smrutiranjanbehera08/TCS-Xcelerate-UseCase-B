@@ -35,7 +35,7 @@ st.write(
 
 symbol = st.text_input(
     "Enter Stock Symbol",
-    value=" "
+    value="TCS.NS"
 )
 
 if st.button("Generate Investment Thesis"):
