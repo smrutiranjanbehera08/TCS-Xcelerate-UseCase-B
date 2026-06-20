@@ -341,6 +341,49 @@ evaluation_report.md
 
 ---
 
+## 📸 Application Screenshots
+
+### 🏠 Dashboard Home
+
+![Dashboard Home](screenshots/dashboard_home.png)
+
+---
+
+### 📊 Financial Summary
+
+![Financial Summary](screenshots/financial_summary.png)
+
+---
+
+### 🏢 Company Overview
+
+![Company Overview](screenshots/company_overview.png)
+
+---
+
+### 📰 Latest News
+
+![Latest News](screenshots/latest_news.png)
+
+---
+
+### ⚖️ Peer Comparison
+
+![Peer Comparison](screenshots/peer_comparison.png)
+
+---
+
+### 🤖 AI Investment Thesis
+
+![AI Investment Thesis](screenshots/ai_thesis.png)
+
+---
+
+### 📥 Download Report Feature
+
+![Download Report Feature](screenshots/download_report.png)
+
+
 # 👨‍💻 Author
 
 **Smrutiranjan Behera**
