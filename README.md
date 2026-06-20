@@ -203,6 +203,7 @@ Final Research Report
 
 * Python
 * Google ADK
+* Google Gemini API
 * Streamlit
 * Yahoo Finance (yfinance)
 * Requests
@@ -320,24 +321,26 @@ evaluation_report.md
 
 ### Completed
 
-* Multi-Agent Architecture
 * Streamlit Web Interface
+* Gemini AI Thesis Generation
 * Dynamic Peer Comparison
 * Google ADK Integration
-* Coordinator Workflow
-* Session Management
-* Evaluation Report
-* Documentation
+* Downloadable Investment Reports
+* Dashboard UI Enhancement
 
 ---
 
 # 🚀 Future Enhancements
 
-* AI-Powered Thesis Generation
-* Advanced News Filtering
-* Cloud Deployment
+* Streamlit Cloud Deployment
+* PDF Report Export
+* Interactive Stock Charts
+* Multi-Company Comparison Dashboard
+* Portfolio Analysis Module
 * Persistent Database Storage
+* User Authentication
 * Enhanced Agent Memory
+
 
 ---
 
