@@ -213,7 +213,7 @@ The project architecture supports deployment on:
 | Dynamic Peer Selection | Completed |
 | Google ADK Integration | Completed |
 | Session Manager        | Completed |
-| Cloud Deployment       | Planned   |
+| Cloud Deployment       | Completed |
 
 ```
 ```
