@@ -388,7 +388,7 @@ evaluation_report.md
 
 # 🌐 Live Application
 
-👉 **[Click here to try the Live App](https://YOUR-APP-URL.streamlit.app)**
+👉 **[Click here to try the Live App](https://multi-agent-financial-research-analyst.streamlit.app)**
 
 ---
 
