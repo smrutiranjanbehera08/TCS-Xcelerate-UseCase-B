@@ -386,6 +386,12 @@ evaluation_report.md
 
 ![Download Report Feature](screenshots/download_report.png)
 
+# 🌐 Live Application
+
+👉 **[Click here to try the Live App](https://YOUR-APP-URL.streamlit.app)**
+
+---
+
 
 # 👨‍💻 Author
 
